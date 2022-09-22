@@ -1,2 +1,2 @@
 # GNL
-Fuck this stupid project, I hate it with my life.
+42 Wolfsburg; Circle 1.
