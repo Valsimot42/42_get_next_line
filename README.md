@@ -1,2 +1,2 @@
 # GNL
-42 Wolfsburg; Circle 1.
+42 Wolfsburg; Circle 1
