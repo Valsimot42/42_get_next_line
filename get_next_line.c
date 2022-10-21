@@ -6,12 +6,11 @@
 /*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:49:43 by tbolkova          #+#    #+#             */
-/*   Updated: 2022/09/13 20:43:47 by tbolkova         ###   ########.fr       */
+/*   Updated: 2022/10/21 13:54:05 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
 
 void	buff_after_line(char *buff)
 {
@@ -31,7 +30,7 @@ char	*create_last(char *buff, char *line)
 
 char	*get_next_line(int fd)
 {
-	static char	buff[1024][BUFFER_SIZE + 1];
+	static char	buff[BUFFER_SIZE + 1];
 	char		*line;
 	int			count;
 
@@ -39,36 +38,21 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = (char *)malloc(sizeof(char));
 	line[0] = '\0';
-	while (!ft_strchr(buff[fd], '\n'))
+	while (!ft_strchr(buff, '\n'))
 	{
-		if (*buff[fd])
-			line = ft_strjoin(line, buff[fd]);
-		count = read(fd, buff[fd], BUFFER_SIZE);
+		if (*buff)
+			line = ft_strjoin(line, buff);
+		count = read(fd, buff, BUFFER_SIZE);
 		if (count <= 0 && (!*line))
 		{
 			free(line);
 			return (NULL);
 		}
-		buff[fd][count] = '\0';
-		if (!ft_strchr(buff[fd], '\n') && count < BUFFER_SIZE)
-			return (create_last(buff[fd], line));
+		buff[count] = '\0';
+		if (!ft_strchr(buff, '\n') && count < BUFFER_SIZE)
+			return (create_last(buff, line));
 	}
-	line = ft_strjoin(line, buff[fd]);
-	buff_after_line(buff[fd]);
+	line = ft_strjoin(line, buff);
+	buff_after_line(buff);
 	return (line);
-}
-
-int main()
-{
-    int fd1 = open("test.txt", O_RDONLY, 0);
-    int fd2 = open("test1.txt", O_RDONLY, 0);
-	char *ptr;
-
-	printf("file1:\n");
-	while ((ptr = get_next_line(fd1)) && printf("%s", ptr))
-		free(ptr);
-	printf("\n\nfile2:\n");
-	while ((ptr = get_next_line(fd2)) && printf("%s", ptr))
-		free(ptr);
-	return (close(fd1), close(fd2));
 }

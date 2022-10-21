@@ -6,12 +6,11 @@
 /*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:49:43 by tbolkova          #+#    #+#             */
-/*   Updated: 2022/09/13 20:00:19 by tbolkova         ###   ########.fr       */
+/*   Updated: 2022/10/21 13:54:00 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
 
 void	buff_after_line(char *buff)
 {
