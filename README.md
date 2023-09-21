@@ -14,6 +14,6 @@
 
 * Clone the git repository.
 * Write tests that you would like to run in `test.txt`
-* Execute `gcc main.c get_next_line.c get_next_line_utils.c` OR `gcc main.c get_next_line_bonus.c get_next_line_utils_bonus.c`
-
+* For manadotry part: Execute `gcc main.c get_next_line.c get_next_line_utils.c`
+* For bonus part: Execute `gcc main.c get_next_line_bonus.c get_next_line_utils_bonus.c`
 
