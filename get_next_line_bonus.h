@@ -6,7 +6,7 @@
 /*   By: tbolkova <tbolkova@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 11:34:27 by tbolkova          #+#    #+#             */
-/*   Updated: 2022/10/26 13:53:51 by tbolkova         ###   ########.fr       */
+/*   Updated: 2023/09/21 11:45:47 by tbolkova         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 5
 # endif
 
 # include <stdlib.h>
