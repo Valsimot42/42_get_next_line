@@ -13,7 +13,7 @@
 <h3><b>¤ How to use ¤</b></h3>
 
 * Clone the git repository.
-* Execute `make` in terminal.
-* Add a `main` to the function you would like to test.
-* Execute `make` in terminal again.
-* Run `libft`.
+* Write tests that you would like to run in `test.txt`
+* Execute `gcc main.c get_next_line.c get_next_line_utils.c` OR `gcc main.c get_next_line_bonus.c get_next_line_utils_bonus.c`
+
+
