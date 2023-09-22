@@ -8,7 +8,6 @@
 2) <b>Introduction</b>
 3) <b>Instructions</b>
 
-
 ---
 <h3><b>¤ How to use ¤</b></h3>
 
@@ -25,3 +24,20 @@
 a peek in other C language concepts which you will find out on your own.</p>
 
 ---
+<h3><b>¤ Instructions ¤</b></h3>
+
+* Project must be written in C.
+
+* Functions should not quit unexpectedly (segmentation fault, bus error, double free, etc) apart from undefined behaviors.
+
+* All heap allocated memory space must be properly freed when necessary. No leaks will be tolerated.
+If the subject requires it, you must submit a Makefile which will compile your source files to the required output with the flags -Wall, -Wextra and -Werror, use cc, and Makefile must not relink.
+
+* Makefile must at least contain the rules $(NAME), all, clean, fclean and re.
+
+---
+<h3><b>¤ Part 1: Parameters ¤</b></h3>
+
+* • Repeated calls (e.g., using a loop) to your get_next_line() function should let you read the text file pointed to by the file descriptor, one line at a time.
+
+* 
