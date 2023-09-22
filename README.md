@@ -38,6 +38,40 @@ If the subject requires it, you must submit a Makefile which will compile your s
 ---
 <h3><b>¤ Part 1: Parameters ¤</b></h3>
 
-* • Repeated calls (e.g., using a loop) to your get_next_line() function should let you read the text file pointed to by the file descriptor, one line at a time.
+* Repeated calls (e.g., using a loop) to the "get_next_line" function should let it read the text file pointed to by the file descriptor, one line at a time.
 
-* 
+* Function should return the line that was read. If there is nothing else to read or if an error occurred, it should return NULL.
+
+* Returned line should include the terminating "\n" character, except if the end of file was reached and does not end with a "\n" character.
+
+* "get_next_line" has an undefined behavior if the file pointed to by the file descriptor changed since the last call whereas "read" didn’t reach the end of file.
+
+* FORBIDDEN: `lseek` and global variables.
+
+---
+<h3><b>¤ Part 2: Example ¤</b></h3>
+
+```ruby
+#include <stdio.h>
+
+void exampleStatic() {
+    // Declare a static variable
+    static int count = 0;
+
+    // Increment the static variable
+    count++;
+
+    // Print the current value
+    printf("Count: %d\n", count);
+}
+
+int main() {
+    exampleStatic();
+    exampleStatic();
+    exampleStatic();
+
+    return 0;
+}
+```
+For the success in this project, it is important to understand what static variables are. They are a powerful tool when it comes to allocating memory, being able to preserve data between function calls,
+etc. However, caution is advised as without complete understanding of its function, you can cause more problems and add extra layers to debugging.
