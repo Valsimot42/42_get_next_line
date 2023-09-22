@@ -17,3 +17,11 @@
 * For manadotry part: Execute `gcc main.c get_next_line.c get_next_line_utils.c`
 * For bonus part: Execute `gcc main.c get_next_line_bonus.c get_next_line_utils_bonus.c`
 
+---
+<h3><b>¤ Introduction ¤</b></h3>
+
+<p align="center"> In "get_next_line", we learn about an important concept of C programming: static variables. The task of this project is to create a program which will take in
+"buffer_size" of characters which it took from the read line. If it encounters a "newline character" `\n`, we should move to the next line. Aside from static variables, "get_next_line" also offers
+a peek in other C language concepts which you will find out on your own.</p>
+
+---
